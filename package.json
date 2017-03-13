@@ -1,6 +1,6 @@
 {
   "name": "all-property-names",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Get all property names of an object including non-enumerable and inherited ones",
   "license": "MIT",
   "repository": "sindresorhus/all-property-names",
