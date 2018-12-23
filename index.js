@@ -1,12 +1,13 @@
 'use strict';
-module.exports = obj => {
+
+module.exports = object => {
 	const props = new Set();
 
 	do {
-		for (const key of Object.getOwnPropertyNames(obj)) {
+		for (const key of Object.getOwnPropertyNames(object)) {
 			props.add(key);
 		}
-	} while ((obj = Object.getPrototypeOf(obj)));
+	} while ((object = Object.getPrototypeOf(object)));
 
 	return props;
 };

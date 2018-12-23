@@ -1,7 +1,7 @@
 import test from 'ava';
-import m from '.';
+import allPropertyNames from '.';
 
-test(t => {
-	t.true(m(Symbol.prototype).has('propertyIsEnumerable'));
-	t.true(m(Array.prototype).has('push'));
+test('main', t => {
+	t.true(allPropertyNames(Symbol.prototype).has('propertyIsEnumerable'));
+	t.true(allPropertyNames(Array.prototype).has('push'));
 });

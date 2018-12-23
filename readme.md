@@ -8,7 +8,7 @@ Like [`Object.getOwnPropertyNames()`](https://developer.mozilla.org/en-US/docs/W
 ## Install
 
 ```
-$ npm install --save all-property-names
+$ npm install all-property-names
 ```
 
 
