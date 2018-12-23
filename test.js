@@ -1,9 +1,9 @@
 import test from 'ava';
-import allPropertyNames from '.';
+import allKeys from '.';
 
 test('main', t => {
-	t.true(allPropertyNames(Symbol.prototype).has('propertyIsEnumerable'));
-	t.true(allPropertyNames(Array.prototype).has('push'));
+	t.true(allKeys(Symbol.prototype).has('propertyIsEnumerable'));
+	t.true(allKeys(Array.prototype).has('push'));
 });
 
 test('includeObjectPrototype option', t => {
@@ -11,10 +11,10 @@ test('includeObjectPrototype option', t => {
 		foo() {}
 	}
 
-	t.is(allPropertyNames(Fixture.prototype, {includeObjectPrototype: false}).size, 2);
-	t.false(allPropertyNames(Fixture.prototype, {includeObjectPrototype: false}).has('isPrototypeOf'));
-	t.true(allPropertyNames(Fixture.prototype).size > 2);
-	t.true(allPropertyNames(Fixture.prototype).has('isPrototypeOf'));
+	t.is(allKeys(Fixture.prototype, {includeObjectPrototype: false}).size, 2);
+	t.false(allKeys(Fixture.prototype, {includeObjectPrototype: false}).has('isPrototypeOf'));
+	t.true(allKeys(Fixture.prototype).size > 2);
+	t.true(allKeys(Fixture.prototype).has('isPrototypeOf'));
 });
 
 test('includeSymbols option', t => {
@@ -24,6 +24,6 @@ test('includeSymbols option', t => {
 		[fixtureSymbol]() {}
 	}
 
-	t.false(allPropertyNames(Fixture.prototype, {includeSymbols: false}).has(fixtureSymbol));
-	t.true(allPropertyNames(Fixture.prototype).has(fixtureSymbol));
+	t.false(allKeys(Fixture.prototype, {includeSymbols: false}).has(fixtureSymbol));
+	t.true(allKeys(Fixture.prototype).has(fixtureSymbol));
 });

@@ -1,6 +1,6 @@
-# all-property-names [![Build Status](https://travis-ci.org/sindresorhus/all-property-names.svg?branch=master)](https://travis-ci.org/sindresorhus/all-property-names)
+# all-keys [![Build Status](https://travis-ci.org/sindresorhus/all-keys.svg?branch=master)](https://travis-ci.org/sindresorhus/all-keys)
 
-> Get all property names of an object including non-enumerable and inherited ones
+> Get all property keys of an object including non-enumerable and inherited ones
 
 Like [`Reflect.ownKeys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys) but traverses up the prototype-chain.
 
@@ -8,14 +8,14 @@ Like [`Reflect.ownKeys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScri
 ## Install
 
 ```
-$ npm install all-property-names
+$ npm install all-keys
 ```
 
 
 ## Usage
 
 ```js
-const allPropertyNames = require('all-property-names');
+const allKeys = require('all-keys');
 
 Object.getOwnPropertyNames(Symbol.prototype);
 /*
@@ -26,7 +26,7 @@ Object.getOwnPropertyNames(Symbol.prototype);
 ]
 */
 
-allPropertyNames(Symbol.prototype);
+allKeys(Symbol.prototype);
 /*
 Set {
 	'constructor',
@@ -48,7 +48,7 @@ Set {
 
 ## API
 
-### allPropertyNames(input, [options])
+### allKeys(input, [options])
 
 Returns a `Set`.
 

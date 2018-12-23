@@ -1,9 +1,9 @@
 {
-	"name": "all-property-names",
+	"name": "all-keys",
 	"version": "1.0.0",
-	"description": "Get all property names of an object including non-enumerable and inherited ones",
+	"description": "Get all property keys of an object including non-enumerable and inherited ones",
 	"license": "MIT",
-	"repository": "sindresorhus/all-property-names",
+	"repository": "sindresorhus/all-keys",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
