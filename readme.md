@@ -48,13 +48,24 @@ Set {
 
 ## API
 
-### allPropertyNames(input)
+### allPropertyNames(input, [options])
 
 Returns a `Set`.
 
 #### input
 
 Type: `Object`
+
+#### options
+
+Type: `Object`
+
+##### includeObjectPrototype
+
+Type: `boolean`<br>
+Default: `true`
+
+Include `Object.prototype` properties like `isPrototypeOf`.
 
 
 ## License
