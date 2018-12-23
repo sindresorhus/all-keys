@@ -2,7 +2,7 @@
 
 > Get all property names of an object including non-enumerable and inherited ones
 
-Like [`Object.getOwnPropertyNames()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames) but traverses up the prototype-chain.
+Like [`Reflect.ownKeys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys) but traverses up the prototype-chain.
 
 
 ## Install
@@ -66,6 +66,13 @@ Type: `boolean`<br>
 Default: `true`
 
 Include `Object.prototype` properties like `isPrototypeOf`.
+
+##### includeSymbols
+
+Type: `boolean`<br>
+Default: `true`
+
+Include [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) keys.
 
 
 ## License

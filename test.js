@@ -7,12 +7,23 @@ test('main', t => {
 });
 
 test('includeObjectPrototype option', t => {
-	class Foo {
+	class Fixture {
 		foo() {}
 	}
 
-	t.is(allPropertyNames(Foo.prototype, {includeObjectPrototype: false}).size, 2);
-	t.not(allPropertyNames(Foo.prototype, {includeObjectPrototype: false}).has('isPrototypeOf'));
-	t.true(allPropertyNames(Foo.prototype).size > 2);
-	t.true(allPropertyNames(Foo.prototype).has('isPrototypeOf'));
+	t.is(allPropertyNames(Fixture.prototype, {includeObjectPrototype: false}).size, 2);
+	t.false(allPropertyNames(Fixture.prototype, {includeObjectPrototype: false}).has('isPrototypeOf'));
+	t.true(allPropertyNames(Fixture.prototype).size > 2);
+	t.true(allPropertyNames(Fixture.prototype).has('isPrototypeOf'));
+});
+
+test('includeSymbols option', t => {
+	const fixtureSymbol = Symbol('fixture');
+
+	class Fixture {
+		[fixtureSymbol]() {}
+	}
+
+	t.false(allPropertyNames(Fixture.prototype, {includeSymbols: false}).has(fixtureSymbol));
+	t.true(allPropertyNames(Fixture.prototype).has(fixtureSymbol));
 });

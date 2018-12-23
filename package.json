@@ -29,7 +29,11 @@
 		"inherited",
 		"prototype",
 		"enumerable",
-		"non-enumerable"
+		"non-enumerable",
+		"reflect",
+		"ownkeys",
+		"symbol",
+		"symbols"
 	],
 	"devDependencies": {
 		"ava": "^1.0.1",
