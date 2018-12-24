@@ -8,7 +8,7 @@ Like [`Reflect.ownKeys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScri
 ## Install
 
 ```
-$ npm install all-keys
+$ npm install all-keys -S
 ```
 
 
