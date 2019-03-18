@@ -1,10 +1,11 @@
 'use strict';
 
-module.exports = (object, options) => {
-	options = Object.assign({
+const allKeys = (object, options) => {
+	options = {
 		includeObjectPrototype: true,
-		includeSymbols: true
-	}, options);
+		includeSymbols: true,
+		...options
+	};
 
 	const getKeys = options.includeSymbols ? Reflect.ownKeys : Object.getOwnPropertyNames;
 	const props = new Set();
@@ -17,3 +18,6 @@ module.exports = (object, options) => {
 
 	return props;
 };
+
+module.exports = allKeys;
+module.exports.default = allKeys;

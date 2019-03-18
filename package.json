@@ -10,13 +10,14 @@
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && ava && tsd-check"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"get",
@@ -36,7 +37,11 @@
 		"symbols"
 	],
 	"devDependencies": {
-		"ava": "^1.0.1",
-		"xo": "^0.23.0"
+		"ava": "^1.3.1",
+		"tsd-check": "^0.5.0",
+		"xo": "^0.24.0"
+	},
+	"dependencies": {
+		"type-fest": "^0.3.0"
 	}
 }
