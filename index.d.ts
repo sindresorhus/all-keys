@@ -9,7 +9,7 @@ export interface Options {
 	readonly includeObjectPrototype?: boolean;
 
 	/**
-	Include [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) keys.
+	Include [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) keys.
 
 	@default true
 	*/
@@ -19,34 +19,38 @@ export interface Options {
 /**
 Get all property keys of an object including non-enumerable and inherited ones. Like [Reflect.ownKeys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys) but traverses up the prototype-chain.
 
-@returns A Set of all property names from `object`.
+@returns All property names from `object`.
 
 @example
 ```
 import allKeys from 'all-keys';
 
 Object.getOwnPropertyNames(Symbol.prototype);
-// [
-//	'constructor',
-//	'toString',
-//	'valueOf'
-// ]
+/*
+[
+	'constructor',
+	'toString',
+	'valueOf'
+]
+*\/
 
 allKeys(Symbol.prototype);
-// Set {
-//	'constructor',
-//	'toString',
-//	'valueOf',
-//	'toLocaleString',
-//	'hasOwnProperty',
-//	'isPrototypeOf',
-//	'propertyIsEnumerable',
-//	'__defineGetter__',
-//	'__lookupGetter__',
-//	'__defineSetter__',
-//	'__lookupSetter__',
-//	'__proto__'
-// }
+/*
+Set {
+	'constructor',
+	'toString',
+	'valueOf',
+	'toLocaleString',
+	'hasOwnProperty',
+	'isPrototypeOf',
+	'propertyIsEnumerable',
+	'__defineGetter__',
+	'__lookupGetter__',
+	'__defineSetter__',
+	'__lookupSetter__',
+	'__proto__'
+}
+*\/
 ```
 */
 export default function allKeys<ObjectType extends {[key: string]: unknown}>(

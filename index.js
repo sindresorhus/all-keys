@@ -8,15 +8,15 @@ const allKeys = (object, options) => {
 	};
 
 	const getKeys = options.includeSymbols ? Reflect.ownKeys : Object.getOwnPropertyNames;
-	const props = new Set();
+	const properties = new Set();
 
 	do {
 		for (const key of getKeys(object)) {
-			props.add(key);
+			properties.add(key);
 		}
 	} while ((object = Object.getPrototypeOf(object)) && (options.includeObjectPrototype || object !== Object.prototype));
 
-	return props;
+	return properties;
 };
 
 module.exports = allKeys;
