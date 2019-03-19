@@ -48,11 +48,11 @@ Set {
 
 ## API
 
-### allKeys(input, [options])
+### allKeys(object, [options])
 
-Returns a `Set`.
+Returns a `Set` of all property names from `object`.
 
-#### input
+#### object
 
 Type: `Object`
 
