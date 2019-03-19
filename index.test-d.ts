@@ -1,6 +1,6 @@
 import {expectType} from 'tsd-check';
-import allKeys from '.';
 import {LiteralUnion} from 'type-fest';
+import allKeys from '.';
 
 expectType<Set<LiteralUnion<'toString' | 'valueOf', string | number | symbol>>>(
 	allKeys(Symbol.prototype)
