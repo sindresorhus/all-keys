@@ -1,6 +1,6 @@
-import {expectType} from 'tsd-check';
+import {expectType} from 'tsd';
 import {LiteralUnion} from 'type-fest';
-import allKeys from '.';
+import allKeys = require('.');
 
 expectType<Set<LiteralUnion<'toString' | 'valueOf', string | number | symbol>>>(
 	allKeys(Symbol.prototype)

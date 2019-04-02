@@ -20,4 +20,5 @@ const allKeys = (object, options) => {
 };
 
 module.exports = allKeys;
+// TODO: Remove this for the next major release
 module.exports.default = allKeys;
