@@ -1,6 +1,6 @@
 {
 	"name": "all-keys",
-	"version": "3.1.0",
+	"version": "3.1.1",
 	"description": "Get all property keys of an object including non-enumerable and inherited ones",
 	"license": "MIT",
 	"repository": "sindresorhus/all-keys",
