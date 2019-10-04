@@ -48,17 +48,17 @@ Set {
 
 ## API
 
-### allKeys(object, [options])
+### allKeys(object, options?)
 
 Returns a `Set` of all property names from `object`.
 
 #### object
 
-Type: `Object`
+Type: `object`
 
 #### options
 
-Type: `Object`
+Type: `object`
 
 ##### includeObjectPrototype
 
@@ -73,8 +73,3 @@ Type: `boolean`<br>
 Default: `true`
 
 Include [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) keys.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
