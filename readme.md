@@ -1,4 +1,4 @@
-# all-keys [![Build Status](https://travis-ci.org/sindresorhus/all-keys.svg?branch=master)](https://travis-ci.org/sindresorhus/all-keys)
+# all-keys
 
 > Get all property keys of an object including non-enumerable and inherited ones
 
