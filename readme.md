@@ -4,18 +4,16 @@
 
 Like [`Reflect.ownKeys()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect/ownKeys) but traverses up the prototype-chain.
 
-
 ## Install
 
 ```
 $ npm install all-keys
 ```
 
-
 ## Usage
 
 ```js
-const allKeys = require('all-keys');
+import allKeys from 'all-keys';
 
 Object.getOwnPropertyNames(Symbol.prototype);
 /*
@@ -45,7 +43,6 @@ Set {
 */
 ```
 
-
 ## API
 
 ### allKeys(object, options?)
@@ -62,14 +59,14 @@ Type: `object`
 
 ##### includeObjectPrototype
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Include `Object.prototype` properties like `isPrototypeOf`.
 
 ##### includeSymbols
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Include [`Symbol`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) keys.

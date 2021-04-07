@@ -1,5 +1,5 @@
 import test from 'ava';
-import allKeys from '.';
+import allKeys from './index.js';
 
 test('main', t => {
 	t.true(allKeys(Symbol.prototype).has('propertyIsEnumerable'));

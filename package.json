@@ -4,13 +4,16 @@
 	"description": "Get all property keys of an object including non-enumerable and inherited ones",
 	"license": "MIT",
 	"repository": "sindresorhus/all-keys",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=8"
+		"node": ">=12"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -37,11 +40,11 @@
 		"symbols"
 	],
 	"dependencies": {
-		"type-fest": "^0.8.1"
+		"type-fest": "^1.0.1"
 	},
 	"devDependencies": {
-		"ava": "^2.4.0",
-		"tsd": "^0.9.0",
-		"xo": "^0.25.3"
+		"ava": "^3.15.0",
+		"tsd": "^0.14.0",
+		"xo": "^0.38.2"
 	}
 }
