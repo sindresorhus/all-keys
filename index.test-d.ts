@@ -1,13 +1,13 @@
-import {expectType} from 'tsd';
+import {expectAssignable} from 'tsd';
 import {LiteralUnion} from 'type-fest';
 import allKeys from './index.js';
 
-expectType<Set<LiteralUnion<'toString' | 'valueOf', string | number | symbol>>>(
+expectAssignable<Set<LiteralUnion<'toString' | 'valueOf', PropertyKey>>>(
 	allKeys(Symbol.prototype)
 );
-expectType<Set<LiteralUnion<'toString' | 'valueOf', string | number | symbol>>>(
+expectAssignable<Set<LiteralUnion<'toString' | 'valueOf', PropertyKey>>>(
 	allKeys(Symbol.prototype, {includeObjectPrototype: false})
 );
-expectType<Set<LiteralUnion<'toString' | 'valueOf', string | number | symbol>>>(
+expectAssignable<Set<LiteralUnion<'toString' | 'valueOf', PropertyKey>>>(
 	allKeys(Symbol.prototype, {includeSymbols: false})
 );

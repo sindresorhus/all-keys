@@ -56,4 +56,4 @@ Set {
 export default function allKeys<ObjectType extends Record<string, any>>(
 	object: ObjectType,
 	options?: Options
-): Set<LiteralUnion<keyof ObjectType, string | number | symbol>>;
+): Set<LiteralUnion<keyof ObjectType, PropertyKey>>;
